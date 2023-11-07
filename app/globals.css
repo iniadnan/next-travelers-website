@@ -2,26 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer utilities {
+  @font-face {
+      font-family: "Heavitas";
+      src: url("/assets/fonts/Heavitas.ttf");
+      font-weight: 400;
+      font-display: swap;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+  @font-face {
+      font-family: "SF Pro Display";
+      src: url("/assets/fonts/SFPRODISPLAYREGULAR.OTF");
+      font-weight: 400;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: "SF Pro Display";
+      src: url("/assets/fonts/SFPRODISPLAYMEDIUM.OTF");
+      font-weight: 500;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: "SF Pro Display";
+      src: url("/assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF");
+      font-weight: 600;
+      font-style: italic, oblique;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: "SF Pro Display";
+      src: url("/assets/fonts/SFPRODISPLAYBOLD.OTF");
+      font-weight: bold;
+      font-display: swap;
+  }
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      font-family: 'SF Pro Display', sans-serif;
+      font-size: 18px;
+  }
+
+  .container-travelers {
+      max-width: 1070px;
+      width: 100%;
+      margin: 0px auto;
+  }
+
+  .font-heavitas {
+      font-family: "Heavitas", Helvetica, sans-serif;
+  }
 }
