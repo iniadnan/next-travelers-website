@@ -4,6 +4,29 @@ import Footer from "./components/Footer";
 export default function Page() {
   return (
     <>
+      <section id='sponsor'>
+        <div className="container-travelers pt-[25px] pb-8 md:pb-10 lg:pb-[55px] px-5 md:px-5 lg:px-0">
+          {/* <!-- SPONSOR LIST --> */}
+          <div className="flex items-center">
+            <div className="w-1/4">
+              <Image className="h-auto w-full" src="/images/sponsor-expedia.png" height="100" width="100"
+                alt="expedia" />
+            </div>
+            <div className="w-1/4">
+              <Image className="h-auto w-full" src="/images/sponsor-skyscanner.png" height="100" width="100"
+                alt="skyscanner" />
+            </div>
+            <div className="w-1/4">
+              <Image className="h-auto w-full" src="/images/sponsor-turkish.png" height="100" width="100"
+                alt="turkish" />
+            </div>
+            <div className="w-1/4">
+              <Image className="h-auto w-full" src="/images/sponsor-sunexpress.png" height="100" width="100"
+                alt="sunexpress" />
+            </div>
+          </div>
+        </div>
+      </section>
       <main id='booking'>
         <div className="container-travelers pb-[90px] md:pb-[100px] lg:pb-[120px] px-5 md:px-5 lg:px-0">
           <div className="flex flex-wrap lg:flex-nowrap items-start justify-between">
@@ -99,7 +122,7 @@ export default function Page() {
                       width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect width="40" height="40" rx="10" fill="#1E1E1E" />
-                      <g clip-path="url(#clip0_16_859)">
+                      <g clipPath="url(#clip0_16_859)">
                         <path
                           d="M20 10C22.3869 10 24.6761 10.9482 26.364 12.636C28.0518 14.3239 29 16.6131 29 19C29 22.074 27.324 24.59 25.558 26.395C24.6755 27.2869 23.7128 28.0956 22.682 28.811L22.256 29.101L22.056 29.234L21.679 29.474L21.343 29.679L20.927 29.921C20.6445 30.0818 20.325 30.1663 20 30.1663C19.675 30.1663 19.3555 30.0818 19.073 29.921L18.657 29.679L18.137 29.359L17.945 29.234L17.535 28.961C16.423 28.2083 15.3871 27.3489 14.442 26.395C12.676 24.588 11 22.074 11 19C11 16.6131 11.9482 14.3239 13.636 12.636C15.3239 10.9482 17.6131 10 20 10ZM20 16C19.606 16 19.2159 16.0776 18.8519 16.2284C18.488 16.3791 18.1573 16.6001 17.8787 16.8787C17.6001 17.1573 17.3791 17.488 17.2284 17.8519C17.0776 18.2159 17 18.606 17 19C17 19.394 17.0776 19.7841 17.2284 20.1481C17.3791 20.512 17.6001 20.8427 17.8787 21.1213C18.1573 21.3999 18.488 21.6209 18.8519 21.7716C19.2159 21.9224 19.606 22 20 22C20.7956 22 21.5587 21.6839 22.1213 21.1213C22.6839 20.5587 23 19.7956 23 19C23 18.2044 22.6839 17.4413 22.1213 16.8787C21.5587 16.3161 20.7956 16 20 16Z"
                           fill="#EDEDED" />
@@ -264,7 +287,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="notification">
+      <section id='notification'>
         <div className="container-travelers pb-[90px] md:pb-[100px] lg:pb-[120px] px-5 md:px-5 lg:px-0">
           <div id="notification-background"
             className="flex items-center justify-center bg-cover bg-center h-[380px] md:h-[420px] lg:h-[450px] rounded-[20px]"
