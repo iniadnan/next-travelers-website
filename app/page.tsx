@@ -15,6 +15,10 @@ import "swiper/css/navigation";
 export default function Page() {
 
   const [isMounted, setIsMounted] = useState<Boolean>(false);
+  const [stylesNav, setStylesNav] = useState<Object>({
+    transform: "translateY(-100%)",
+    color: "#EDEDED",
+  })
 
   const stylesHeader = {
     widthLeft: "8%",
@@ -23,7 +27,19 @@ export default function Page() {
   }
 
   function isScrolling() {
-    console.log('scroll')
+    if (window.scrollY > 100) {
+      setStylesNav({
+        transform: "translateY(0%)",
+        color: "#1E1E1E",
+      })
+    }
+    if (window.scrollY < 100) {
+      setStylesNav({
+        transform: "translateY(-100%)",
+        color: "#EDEDED",
+      })
+    }
+
   }
 
   // SCROLLING INIT
@@ -70,7 +86,7 @@ export default function Page() {
 
   return (
     <>
-      <Nav />
+      <Nav styles={stylesNav} />
       <header id='header'>
         <div className="h-screen w-full flex flex-nowrap relative overflow-hidden">
           {/* <!-- HEADER LEFT --> */}

@@ -5,7 +5,7 @@
 @layer utilities {
   @font-face {
       font-family: "Heavitas";
-      src: url("/assets/fonts/Heavitas.ttf");
+      src: url("/fonts/Heavitas.ttf");
       font-weight: 400;
       font-display: swap;
   }
@@ -13,21 +13,21 @@
 
   @font-face {
       font-family: "SF Pro Display";
-      src: url("/assets/fonts/SFPRODISPLAYREGULAR.OTF");
+      src: url("/fonts/SFPRODISPLAYREGULAR.OTF");
       font-weight: 400;
       font-display: swap;
   }
 
   @font-face {
       font-family: "SF Pro Display";
-      src: url("/assets/fonts/SFPRODISPLAYMEDIUM.OTF");
+      src: url("/fonts/SFPRODISPLAYMEDIUM.OTF");
       font-weight: 500;
       font-display: swap;
   }
 
   @font-face {
       font-family: "SF Pro Display";
-      src: url("/assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF");
+      src: url("/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF");
       font-weight: 600;
       font-style: italic, oblique;
       font-display: swap;
@@ -35,7 +35,7 @@
 
   @font-face {
       font-family: "SF Pro Display";
-      src: url("/assets/fonts/SFPRODISPLAYBOLD.OTF");
+      src: url("/fonts/SFPRODISPLAYBOLD.OTF");
       font-weight: bold;
       font-display: swap;
   }

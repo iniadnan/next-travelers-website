@@ -1,4 +1,7 @@
-export default function Nav() {
+export default function Nav(props: { styles: object }) {
+
+    const { styles } = props
+
     return (
         <nav id="nav" className="w-full fixed z-50">
             <div className="container-travelers px-5 md:px-5 lg:px-0 z-20 relative">
@@ -15,15 +18,15 @@ export default function Nav() {
                     </div>
                     {/* <!-- NAV LOGO --> */}
                     <div className="w-4/12 md:w-auto">
-                        <a href="/" className="nav-anchor font-heavitas text-base">TRAVELERS</a>
+                        <a href="/" className="nav-anchor font-heavitas text-base" style={{ color: styles.color }}>TRAVELERS</a>
                     </div>
                     <div className="hidden md:flex md:w-auto md:gap-x-[22px] lg:gap-x-[28px] xl:gap-x-[35px]">
-                        <a href="/" className="nav-anchor font-medium text-base">Home</a>
-                        <a href="/" className="nav-anchor font-medium text-base">About Us</a>
-                        <a href="/" className="nav-anchor font-medium text-base">Destinations</a>
-                        <a href="/" className="nav-anchor font-medium text-base">Travel Deals</a>
-                        <a href="/" className="nav-anchor font-medium text-base">Blog</a>
-                        <a href="/" className="nav-anchor font-medium text-base">Services</a>
+                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Home</a>
+                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>About Us</a>
+                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Destinations</a>
+                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Travel Deals</a>
+                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Blog</a>
+                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Services</a>
                     </div>
                     {/* <!-- BOOK A TRAVEL --> */}
                     <div className="w-4/12 md:w-auto flex justify-end ml-auto">
@@ -38,7 +41,7 @@ export default function Nav() {
                 </div>
             </div>
             {/* <!-- SLIDE WHEN SCROLL --> */}
-            <div className="absolute w-full h-full bg-white top-0 transform -translate-y-full transition duration-500"></div>
+            <div className="absolute w-full h-full bg-white top-0 transform -translate-y-full transition duration-500" style={{ transform: styles.transform }}></div>
         </nav>
     )
 }
