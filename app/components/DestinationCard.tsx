@@ -6,7 +6,7 @@ export default function DestinationCard() {
             {/* <!-- HEADER --> */}
             <div className="relative mb-[26px] w-full rounded-[20px] overflow-hidden">
                 <Image className="h-[380px] md:h-[420px] lg:h-[475px] w-full group-hover:scale-110 transition duration-300 ease-in-out object-cover rounded-[20px]" height="475" width="300"
-                    src="./assets/images/destinations-bali.webp" alt="Bali" />
+                    src="/images/destinations-bali.webp" alt="Bali" />
                     {/* <!-- BOX LABEL --> */}
                     <div className="absolute right-4 bottom-4 flex items-center justify-end gap-x-[13px] z-10">
                         <div className="bg-white rounded-[15px] py-[12px] md:py-[14px] lg:py-[18px] px-[14px] md:px-[15px] flex items-center gap-x-2">

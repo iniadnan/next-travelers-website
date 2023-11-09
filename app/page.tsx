@@ -332,21 +332,15 @@ export default function Page() {
           <div className="w-full overflow-hidden">
             <div className="swiper-container popular-destination-swiper">
               <div className="swiper-wrapper">
-                <div className="swiper-slide">Slide 1</div>
-                <div className="swiper-slide">Slide 2</div>
-                <div className="swiper-slide">Slide 3</div>
-                <div className="swiper-slide">Slide 1</div>
-                <div className="swiper-slide">Slide 2</div>
-                <div className="swiper-slide">Slide 3</div>
-                <div className="swiper-slide">Slide 1</div>
-                <div className="swiper-slide">Slide 2</div>
-                <div className="swiper-slide">Slide 3</div>
-                <div className="swiper-slide">Slide 1</div>
-                <div className="swiper-slide">Slide 2</div>
-                <div className="swiper-slide">Slide 3</div>
-                <div className="swiper-slide">Slide 1</div>
-                <div className="swiper-slide">Slide 2</div>
-                <div className="swiper-slide">Slide 3</div>
+                <DestinationCard />
+                <DestinationCard />
+                <DestinationCard />
+                <DestinationCard />
+                <DestinationCard />
+                <DestinationCard />
+                <DestinationCard />
+                <DestinationCard />
+                <DestinationCard />
               </div>
             </div>
           </div>
