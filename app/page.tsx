@@ -367,15 +367,81 @@ export default function Page() {
           <div className="w-full overflow-hidden">
             <div className="swiper-container popular-destination-swiper">
               <div className="swiper-wrapper">
-                <DestinationCard />
-                <DestinationCard />
-                <DestinationCard />
-                <DestinationCard />
-                <DestinationCard />
-                <DestinationCard />
-                <DestinationCard />
-                <DestinationCard />
-                <DestinationCard />
+                <DestinationCard title="Bali"
+                  image="/images/destinations-bali.webp"
+                  price={380}
+                  location="Indonesia"
+                  star={5.0} />
+                <DestinationCard title="Santorini"
+                  image="/images/destinations-santorini.webp"
+                  price={475}
+                  location="Greece"
+                  star={4.5} />
+                <DestinationCard title="Perhentian Island"
+                  image="/images/destinations-perhentian.webp"
+                  price={410}
+                  location="Malaysia"
+                  star={4.7} />
+                  <DestinationCard title="Bali"
+                  image="/images/destinations-bali.webp"
+                  price={380}
+                  location="Indonesia"
+                  star={5.0} />
+                <DestinationCard title="Santorini"
+                  image="/images/destinations-santorini.webp"
+                  price={475}
+                  location="Greece"
+                  star={4.5} />
+                <DestinationCard title="Perhentian Island"
+                  image="/images/destinations-perhentian.webp"
+                  price={410}
+                  location="Malaysia"
+                  star={4.7} />
+                  <DestinationCard title="Bali"
+                  image="/images/destinations-bali.webp"
+                  price={380}
+                  location="Indonesia"
+                  star={5.0} />
+                <DestinationCard title="Santorini"
+                  image="/images/destinations-santorini.webp"
+                  price={475}
+                  location="Greece"
+                  star={4.5} />
+                <DestinationCard title="Perhentian Island"
+                  image="/images/destinations-perhentian.webp"
+                  price={410}
+                  location="Malaysia"
+                  star={4.7} />
+                  <DestinationCard title="Bali"
+                  image="/images/destinations-bali.webp"
+                  price={380}
+                  location="Indonesia"
+                  star={5.0} />
+                <DestinationCard title="Santorini"
+                  image="/images/destinations-santorini.webp"
+                  price={475}
+                  location="Greece"
+                  star={4.5} />
+                <DestinationCard title="Perhentian Island"
+                  image="/images/destinations-perhentian.webp"
+                  price={410}
+                  location="Malaysia"
+                  star={4.7} />
+                  <DestinationCard title="Bali"
+                  image="/images/destinations-bali.webp"
+                  price={380}
+                  location="Indonesia"
+                  star={5.0} />
+                <DestinationCard title="Santorini"
+                  image="/images/destinations-santorini.webp"
+                  price={475}
+                  location="Greece"
+                  star={4.5} />
+                <DestinationCard title="Perhentian Island"
+                  image="/images/destinations-perhentian.webp"
+                  price={410}
+                  location="Malaysia"
+                  star={4.7} />
               </div>
             </div>
           </div>
