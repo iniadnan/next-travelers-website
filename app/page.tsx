@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import './page.css'
 import Image from 'next/image'
 import Nav from "./components/Nav"
@@ -14,11 +14,15 @@ import "swiper/css/navigation";
 
 export default function Page() {
 
-  const [isMounted, setIsMounted] = useState<Boolean>(false);
-  const [stylesNav, setStylesNav] = useState<Object>({
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+  const [isScrollToEscapeParadise, setIsScrollToEscapeParadise] = useState<boolean>(false)
+  const [positionEscapeParadise, setPositionEscapeParadise] = useState<number>(0)
+  const [stylesNav, setStylesNav] = useState<object>({
     transform: "translateY(-100%)",
     color: "#EDEDED",
   })
+
+  const escapeParadise = useRef()
 
   const stylesHeader = {
     widthLeft: "8%",
@@ -39,13 +43,17 @@ export default function Page() {
         color: "#EDEDED",
       })
     }
-
+    // WHEN WINDOW IN AREA ESCAPE PARADISE
+    if (window.scrollY > (positionEscapeParadise + 450)) {
+      setIsScrollToEscapeParadise(true);
+    }
   }
 
   // SCROLLING INIT
   useEffect(() => {
     document.addEventListener('scroll', isScrolling);
     setIsMounted(true)
+    setPositionEscapeParadise(escapeParadise.current.getBoundingClientRect().top);
   }, [])
 
   // SWIPER INIT
@@ -382,7 +390,7 @@ export default function Page() {
                   price={410}
                   location="Malaysia"
                   star={4.7} />
-                  <DestinationCard title="Bali"
+                <DestinationCard title="Bali"
                   image="/images/destinations-bali.webp"
                   price={380}
                   location="Indonesia"
@@ -397,7 +405,7 @@ export default function Page() {
                   price={410}
                   location="Malaysia"
                   star={4.7} />
-                  <DestinationCard title="Bali"
+                <DestinationCard title="Bali"
                   image="/images/destinations-bali.webp"
                   price={380}
                   location="Indonesia"
@@ -412,7 +420,7 @@ export default function Page() {
                   price={410}
                   location="Malaysia"
                   star={4.7} />
-                  <DestinationCard title="Bali"
+                <DestinationCard title="Bali"
                   image="/images/destinations-bali.webp"
                   price={380}
                   location="Indonesia"
@@ -427,7 +435,7 @@ export default function Page() {
                   price={410}
                   location="Malaysia"
                   star={4.7} />
-                  <DestinationCard title="Bali"
+                <DestinationCard title="Bali"
                   image="/images/destinations-bali.webp"
                   price={380}
                   location="Indonesia"
@@ -447,7 +455,7 @@ export default function Page() {
           </div>
         </div >
       </main>
-      <section id="escape-paradise">
+      <section id='escape-paradise' ref={escapeParadise}>
         <div className="container-travelers py-[90px] md:py-[100px] lg:py-[120px] px-5 md:px-5 lg:px-0">
           <div className="flex flex-wrap items-start justify-between">
             {/* <!-- ESCAPE PARADISE LEFT --> */}
@@ -455,15 +463,15 @@ export default function Page() {
               <h2
                 className="font-medium text-[32px] md:text-[32px] lg:text-[36px] xl:text-[40px] text-[#1E1E1E] leading-[40px] md:leading-[40px] lg:leading-[48px] xl:leading-[52px] mb-4">
                 <div className="inline-block h-[47px] overflow-hidden"><span
-                  className="escape-paradise__main-text inline-block transform translate-y-[50px]"
+                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}
                   style={{ '--animation-order': 1 }}>Escape to
                   paradise: discover</span></div>
                 <div className="inline-block h-[47px] overflow-hidden"><span
-                  className="escape-paradise__main-text inline-block transform translate-y-[50px]"
+                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}
                   style={{ '--animation-order': 2 }}>unforgettable
                   luxury at our</span></div>
                 <div className="inline-block h-[47px] overflow-hidden"><span
-                  className="escape-paradise__main-text inline-block transform translate-y-[50px]"
+                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}
                   style={{ '--animation-order': 3 }}>exquisite
                   travel hotel</span></div>
               </h2>
