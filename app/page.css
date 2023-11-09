@@ -1,0 +1,58 @@
+.nav-anchor {
+    color: #EDEDED;
+    transition: 0.15s ease-in;
+}
+
+.header-left {
+    width: 0%;
+}
+
+.header-right {
+    width: 100%;
+}
+
+.header-left,
+.header-right {
+    transition: 0.5s linear;
+    transition-delay: 0.5s;
+}
+
+.header__main-text,
+.header__secondary-text {
+    transition: 0.75s linear;
+    transition-delay: 1.25s;
+}
+
+.escape-paradise__image-slide {
+    transition: 0.5s ease-in;
+    transition-delay: 1s;
+}
+
+.escape-paradise__main-text {
+    transition: 0.5s ease-in;
+    transition-delay: 1s;
+}
+
+#escape-paradise .escape-paradise__main-text-animation {
+    animation-name: escapeParadiseTextAnimation;
+    animation-duration: 0.8s;
+    animation-delay: calc(var(--animation-order) * 200ms);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+}
+
+@keyframes escapeParadiseTextAnimation {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.notification__main-text,
+.notification__secondary-text {
+    transition: 0.75s linear;
+    transition-delay: 0.25s;
+}

@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import './page.css'
 import Image from 'next/image'
 import Nav from "./components/Nav"
 import Footer from "./components/Footer";
@@ -14,6 +14,25 @@ import "swiper/css/navigation";
 
 export default function Page() {
 
+  const [isMounted, setIsMounted] = useState<Boolean>(false);
+
+  const stylesHeader = {
+    widthLeft: "8%",
+    widthRight: "92%",
+    transformTo0: "translateY(0px)",
+  }
+
+  function isScrolling() {
+    console.log('scroll')
+  }
+
+  // SCROLLING INIT
+  useEffect(() => {
+    document.addEventListener('scroll', isScrolling);
+    setIsMounted(true)
+  }, [])
+
+  // SWIPER INIT
   useEffect(() => {
     const swiper = new Swiper(".swiper-container", {
       // Swiper options here
@@ -55,12 +74,12 @@ export default function Page() {
       <header id='header'>
         <div className="h-screen w-full flex flex-nowrap relative overflow-hidden">
           {/* <!-- HEADER LEFT --> */}
-          <div className="header-left h-full">
+          <div className="header-left h-full" style={{ width: isMounted ? stylesHeader.widthLeft : '' }}>
             <Image className="h-full w-full object-cover" height="800" width="200" src="/images/header-left.webp"
               alt="Ornament" />
           </div>
           {/* <!-- HEADER RIGHT: MAIN IMAGE --> */}
-          <div className="header-right h-full relative">
+          <div className="header-right h-full relative" style={{ width: isMounted ? stylesHeader.widthRight : '' }}>
             {/* <!-- TEXT & 1M IMAGE --> */}
             <div className="absolute top-[80%] md:top-1/2 transform -translate-y-1/2 left-0 z-10">
               {/* <!-- TEXT --> */}
@@ -153,13 +172,13 @@ export default function Page() {
           <section className="absolute top-[35%] md:top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
             <div className="h-[120px] md:h-[150px] overflow-hidden">
               <h1
-                className="header__main-text transform translate-y-[120px] md:translate-y-[150px] font-medium text-[60px] md:text-[72px] lg:text-[80px] xl:text-[100px] text-white text-center whitespace-nowrap leading-none md:leading-normal mb-5 md:mb-0">
+                className="header__main-text transform translate-y-[120px] md:translate-y-[150px] font-medium text-[60px] md:text-[72px] lg:text-[80px] xl:text-[100px] text-white text-center whitespace-nowrap leading-none md:leading-normal mb-5 md:mb-0" style={{ transform: isMounted ? stylesHeader.transformTo0 : '' }}>
                 Let’s travel<br className="block md:hidden" /> the world
               </h1>
             </div>
             <div className="h-[68px] md:h-[40px] overflow-hidden">
               <p
-                className="header__secondary-text transform translate-y-[68px] md:translate-y-[40px] max-w-10/12 mx-auto font-medium text-[20px] md:text-[22px] lg:text-[26px] text-white text-center">
+                className="header__secondary-text transform translate-y-[68px] md:translate-y-[40px] max-w-10/12 mx-auto font-medium text-[20px] md:text-[22px] lg:text-[26px] text-white text-center" style={{ transform: isMounted ? stylesHeader.transformTo0 : '' }}>
                 Explore destinations, places, and
                 unforgettable experiences</p>
             </div>
