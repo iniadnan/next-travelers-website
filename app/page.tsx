@@ -1,12 +1,58 @@
+"use client"
+
+import { useEffect } from "react";
+
 import Image from 'next/image'
 import Nav from "./components/Nav"
 import Footer from "./components/Footer";
+import DestinationCard from './components/DestinationCard';
+
+import Swiper from "swiper";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function Page() {
+
+  useEffect(() => {
+    const swiper = new Swiper(".swiper-container", {
+      // Swiper options here
+      slidesPerView: "auto",
+      spaceBetween: 18,
+      modules: [Navigation, Autoplay],
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".popular-destination-swiper-button-next",
+        prevEl: ".popular-destination-swiper-button-prev",
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: "auto",
+          spaceBetween: 12,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 18,
+        },
+        1040: {
+          slidesPerView: 3,
+          spaceBetween: 12,
+        },
+        1240: {
+          slidesPerView: 3,
+          spaceBetween: 18,
+        },
+      },
+    });
+  }, [])
+
   return (
     <>
       <Nav />
-      <header id="header">
+      <header id='header'>
         <div className="h-screen w-full flex flex-nowrap relative overflow-hidden">
           {/* <!-- HEADER LEFT --> */}
           <div className="header-left h-full">
@@ -72,15 +118,15 @@ export default function Page() {
                 width="175" height="175" viewBox="0 0 175 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_12_206)">
                   <circle cx="87.5" cy="83.5" r="54.5" fill="url(#paint0_linear_12_206)" />
-                  <circle cx="87.5" cy="83.5" r="50.5" stroke="#EDEDED" stroke-width="8" />
+                  <circle cx="87.5" cy="83.5" r="50.5" stroke="#EDEDED" strokeWidth="8" />
                 </g>
                 <path
                   d="M73.5215 92V80.6133H73.4629L69.8691 83.0938V80.4375L73.5117 77.9082H76.4414V92H73.5215ZM94.6445 92H92.0176V82.4883H91.9395L88.1113 91.8633H86.2559L82.4277 82.4883H82.3496V92H79.7227V77.9082H83.1406L87.1445 87.8984H87.2227L91.2266 77.9082H94.6445V92ZM103.57 87.5957V91.8633H101.012V87.5957H97.0273V85.1055H101.012V80.8867H103.57V85.1055H107.555V87.5957H103.57Z"
                   fill="#EDEDED" />
                 <defs>
                   <filter id="filter0_d_12_206" x="0" y="0" width="175" height="175"
-                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix"
                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
@@ -94,8 +140,8 @@ export default function Page() {
                   </filter>
                   <linearGradient id="paint0_linear_12_206" x1="87.5" y1="-93.3222" x2="87.5" y2="243.367"
                     gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#0077ED" />
-                    <stop offset="1" stop-color="#7BF9D3" />
+                    <stop stopColor="#0077ED" />
+                    <stop offset="1" stopColor="#7BF9D3" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -128,13 +174,13 @@ export default function Page() {
                   <span>Location</span>
                   <svg className="w-[18px] h-[19px] md:w-[22px] md:h-[23px] lg:w-[24px] lg:h-[25px]" width="24"
                     height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 10.5L12 15.5L17 10.5" stroke="url(#paint0_linear_7_16)" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7 10.5L12 15.5L17 10.5" stroke="url(#paint0_linear_7_16)" strokeWidth="2"
+                      strokeLinecap="round" strokeLinejoin="round" />
                     <defs>
                       <linearGradient id="paint0_linear_7_16" x1="12" y1="4.88889" x2="12" y2="20.3333"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -147,13 +193,13 @@ export default function Page() {
                   <span>Date</span>
                   <svg className="w-[18px] h-[19px] md:w-[22px] md:h-[23px] lg:w-[24px] lg:h-[25px]" width="24"
                     height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 10.5L12 15.5L17 10.5" stroke="url(#paint0_linear_7_16)" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7 10.5L12 15.5L17 10.5" stroke="url(#paint0_linear_7_16)" strokeWidth="2"
+                      strokeLinecap="round" strokeLinejoin="round" />
                     <defs>
                       <linearGradient id="paint0_linear_7_16" x1="12" y1="4.88889" x2="12" y2="20.3333"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -166,13 +212,13 @@ export default function Page() {
                   <span>Price</span>
                   <svg className="w-[18px] h-[19px] md:w-[22px] md:h-[23px] lg:w-[24px] lg:h-[25px]" width="24"
                     height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 10.5L12 15.5L17 10.5" stroke="url(#paint0_linear_7_16)" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7 10.5L12 15.5L17 10.5" stroke="url(#paint0_linear_7_16)" strokeWidth="2"
+                      strokeLinecap="round" strokeLinejoin="round" />
                     <defs>
                       <linearGradient id="paint0_linear_7_16" x1="12" y1="4.88889" x2="12" y2="20.3333"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -194,8 +240,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_7_8" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -228,6 +274,84 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <main id='popular-destination'>
+        <div className="container-travelers px-5 md:px-5 lg:px-0">
+          <section className="flex items-center justify-between mb-8 md:mb-10 lg:mb-12">
+            <div className="max-w-2/3">
+              <h2
+                className="font-medium text-[32px] md:text-[32px] lg:text-[36px] xl:text-[40px] text-[#1E1E1E]"
+              >
+                Popular destinations
+              </h2>
+            </div>
+            {/* <!-- BUTTON FOR TRIGGER SLIDE RIGHT - LEFT --> */}
+            <div className="flex items-center gap-x-3 md:gap-x-5">
+              <button
+                type="button"
+                className="popular-destination-swiper-button-prev h-8 w-8 md:h-10 md:w-10 rounded-full inline-flex items-center justify-center"
+                aria-label="Button Swiper Left"
+                style={{ backgroundColor: "rgba(229, 240, 245, 1)" }}
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 11H9.40999L12.71 7.71C12.8983 7.5217 13.0041 7.2663 13.0041 7C13.0041 6.7337 12.8983 6.47831 12.71 6.29C12.5217 6.1017 12.2663 5.99591 12 5.99591C11.7337 5.99591 11.4783 6.1017 11.29 6.29L6.28999 11.29C6.19895 11.3851 6.12758 11.4973 6.07999 11.62C5.97997 11.8635 5.97997 12.1365 6.07999 12.38C6.12758 12.5028 6.19895 12.6149 6.28999 12.71L11.29 17.71C11.383 17.8037 11.4936 17.8781 11.6154 17.9289C11.7373 17.9797 11.868 18.0058 12 18.0058C12.132 18.0058 12.2627 17.9797 12.3846 17.9289C12.5064 17.8781 12.617 17.8037 12.71 17.71C12.8037 17.617 12.8781 17.5064 12.9289 17.3846C12.9796 17.2627 13.0058 17.132 13.0058 17C13.0058 16.868 12.9796 16.7373 12.9289 16.6154C12.8781 16.4936 12.8037 16.383 12.71 16.29L9.40999 13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z"
+                    fill="#8A8A8A"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                className="popular-destination-swiper-button-next h-8 w-8 md:h-10 md:w-10 rounded-full inline-flex items-center justify-center"
+                aria-label="Button Swiper Right"
+                style={{
+                  background: "linear-gradient(180deg, #0077ed - 112.22 %, #7bf9d3 196.67%)"
+                }}
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.92 11.62C17.8724 11.4973 17.801 11.3851 17.71 11.29L12.71 6.29C12.6168 6.19676 12.5061 6.1228 12.3842 6.07234C12.2624 6.02188 12.1319 5.99591 12 5.99591C11.7337 5.99591 11.4783 6.1017 11.29 6.29C11.1968 6.38324 11.1228 6.49393 11.0723 6.61575C11.0219 6.73758 10.9959 6.86814 10.9959 7C10.9959 7.2663 11.1017 7.5217 11.29 7.71L14.59 11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H14.59L11.29 16.29C11.1963 16.383 11.1219 16.4936 11.0711 16.6154C11.0203 16.7373 10.9942 16.868 10.9942 17C10.9942 17.132 11.0203 17.2627 11.0711 17.3846C11.1219 17.5064 11.1963 17.617 11.29 17.71C11.383 17.8037 11.4936 17.8781 11.6154 17.9289C11.7373 17.9797 11.868 18.0058 12 18.0058C12.132 18.0058 12.2627 17.9797 12.3846 17.9289C12.5064 17.8781 12.617 17.8037 12.71 17.71L17.71 12.71C17.801 12.6149 17.8724 12.5028 17.92 12.38C18.02 12.1365 18.02 11.8635 17.92 11.62Z"
+                    fill="#EDEDED"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          {/* <!-- LIST OF DESTINATIONS --> */}
+          <div className="w-full overflow-hidden">
+            <div className="swiper-container popular-destination-swiper">
+              <div className="swiper-wrapper">
+                <div className="swiper-slide">Slide 1</div>
+                <div className="swiper-slide">Slide 2</div>
+                <div className="swiper-slide">Slide 3</div>
+                <div className="swiper-slide">Slide 1</div>
+                <div className="swiper-slide">Slide 2</div>
+                <div className="swiper-slide">Slide 3</div>
+                <div className="swiper-slide">Slide 1</div>
+                <div className="swiper-slide">Slide 2</div>
+                <div className="swiper-slide">Slide 3</div>
+                <div className="swiper-slide">Slide 1</div>
+                <div className="swiper-slide">Slide 2</div>
+                <div className="swiper-slide">Slide 3</div>
+                <div className="swiper-slide">Slide 1</div>
+                <div className="swiper-slide">Slide 2</div>
+                <div className="swiper-slide">Slide 3</div>
+              </div>
+            </div>
+          </div>
+        </div >
+      </main>
       <section id="escape-paradise">
         <div className="container-travelers py-[90px] md:py-[100px] lg:py-[120px] px-5 md:px-5 lg:px-0">
           <div className="flex flex-wrap items-start justify-between">
@@ -272,15 +396,15 @@ export default function Page() {
                     <rect y="0.5" width="40" height="40" rx="10" fill="#1E1E1E" />
                     <mask id="mask0_16_613" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="9"
                       y="13" width="22" height="15">
-                      <path d="M10 14.5V26.5M30 26.5V23H10" stroke="white" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M10 14.5V26.5M30 26.5V23H10" stroke="white" strokeWidth="2"
+                        strokeLinecap="round" strokeLinejoin="round" />
                       <path
                         d="M19 16.5V23H30V18C30 17.6022 29.842 17.2206 29.5607 16.9393C29.2794 16.658 28.8978 16.5 28.5 16.5H19Z"
-                        fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
+                        fill="white" stroke="white" strokeWidth="2" strokeLinecap="round"
+                        strokeLinejoin="round" />
                       <path
                         d="M14.5 20C15.3284 20 16 19.3284 16 18.5C16 17.6716 15.3284 17 14.5 17C13.6716 17 13 17.6716 13 18.5C13 19.3284 13.6716 20 14.5 20Z"
-                        fill="white" stroke="white" stroke-width="2" />
+                        fill="white" stroke="white" strokeWidth="2" />
                     </mask>
                     <g mask="url(#mask0_16_613)">
                       <path d="M8 8.5H32V32.5H8V8.5Z" fill="#EDEDED" />
@@ -303,17 +427,17 @@ export default function Page() {
                       d="M44.2266 26.0469V28H36.9375V16.7266H39.2969V26.0469H44.2266ZM49.0625 21.1328C48.0625 21.1328 47.3438 21.8906 47.2656 22.9375H50.8203C50.7734 21.8672 50.0781 21.1328 49.0625 21.1328ZM50.8516 25.4375H52.9453C52.6953 27.0781 51.1953 28.1797 49.125 28.1797C46.5469 28.1797 45 26.5312 45 23.8516C45 21.1797 46.5625 19.4453 49.0391 19.4453C51.4766 19.4453 53.0156 21.0938 53.0156 23.6406V24.3359H47.2422V24.4766C47.2422 25.6719 48 26.4922 49.1641 26.4922C50 26.4922 50.6406 26.0781 50.8516 25.4375ZM57.4297 26.4844C58.4219 26.4844 59.2422 25.8359 59.2422 24.9297V24.3203L57.4766 24.4297C56.625 24.4922 56.1406 24.875 56.1406 25.4688C56.1406 26.0938 56.6562 26.4844 57.4297 26.4844ZM56.6797 28.1328C55.0859 28.1328 53.875 27.1016 53.875 25.5938C53.875 24.0703 55.0469 23.1875 57.1328 23.0625L59.2422 22.9375V22.3828C59.2422 21.6016 58.6953 21.1484 57.8359 21.1484C56.9844 21.1484 56.4453 21.5703 56.3359 22.1875H54.25C54.3359 20.5625 55.7188 19.4453 57.9375 19.4453C60.0859 19.4453 61.4844 20.5547 61.4844 22.2422V28H59.2812V26.7188H59.2344C58.7656 27.6094 57.7266 28.1328 56.6797 28.1328ZM62.9609 28V19.625H65.1641V21.1328H65.2109C65.5078 20.0703 66.2188 19.4922 67.2031 19.4922C67.4688 19.4922 67.6953 19.5312 67.8516 19.5781V21.5859C67.6641 21.5078 67.3516 21.4531 67.0234 21.4531C65.8984 21.4531 65.2422 22.1406 65.2422 23.3203V28H62.9609ZM68.7891 28V19.625H70.9922V21.1172H71.0391C71.4844 20.0781 72.3672 19.4688 73.6562 19.4688C75.5156 19.4688 76.5625 20.6406 76.5625 22.6016V28H74.2812V23.0781C74.2812 21.9844 73.7656 21.3594 72.7422 21.3594C71.7188 21.3594 71.0703 22.1094 71.0703 23.1953V28H68.7891ZM81.1797 28V19.625H83.3828V21.1406H83.4297C83.7812 20.1328 84.6797 19.4688 85.8203 19.4688C87.0312 19.4688 87.875 20.0938 88.1562 21.1875H88.2031C88.5781 20.1328 89.5781 19.4688 90.8047 19.4688C92.4453 19.4688 93.5469 20.5938 93.5469 22.2812V28H91.2656V22.8516C91.2656 21.8828 90.7812 21.3516 89.8984 21.3516C89.0312 21.3516 88.4609 21.9844 88.4609 22.9141V28H86.2656V22.7812C86.2656 21.8828 85.7578 21.3516 84.9141 21.3516C84.0469 21.3516 83.4609 22.0078 83.4609 22.9453V28H81.1797ZM98.8359 28.1797C96.3047 28.1797 94.6875 26.5547 94.6875 23.8047C94.6875 21.0938 96.3281 19.4453 98.8359 19.4453C101.344 19.4453 102.984 21.0859 102.984 23.8047C102.984 26.5625 101.367 28.1797 98.8359 28.1797ZM98.8359 26.4375C99.9531 26.4375 100.664 25.4922 100.664 23.8125C100.664 22.1484 99.9453 21.1875 98.8359 21.1875C97.7266 21.1875 97 22.1484 97 23.8125C97 25.4922 97.7109 26.4375 98.8359 26.4375ZM104.164 28V19.625H106.367V21.1328H106.414C106.711 20.0703 107.422 19.4922 108.406 19.4922C108.672 19.4922 108.898 19.5312 109.055 19.5781V21.5859C108.867 21.5078 108.555 21.4531 108.227 21.4531C107.102 21.4531 106.445 22.1406 106.445 23.3203V28H104.164ZM113.469 21.1328C112.469 21.1328 111.75 21.8906 111.672 22.9375H115.227C115.18 21.8672 114.484 21.1328 113.469 21.1328ZM115.258 25.4375H117.352C117.102 27.0781 115.602 28.1797 113.531 28.1797C110.953 28.1797 109.406 26.5312 109.406 23.8516C109.406 21.1797 110.969 19.4453 113.445 19.4453C115.883 19.4453 117.422 21.0938 117.422 23.6406V24.3359H111.648V24.4766C111.648 25.6719 112.406 26.4922 113.57 26.4922C114.406 26.4922 115.047 26.0781 115.258 25.4375Z"
                       fill="url(#paint0_linear_12_310)" />
                     <rect x="1" y="1" width="152" height="43" rx="9" stroke="url(#paint1_linear_12_310)"
-                      stroke-width="2" />
+                      strokeWidth="2" />
                     <defs>
                       <linearGradient id="paint0_linear_12_310" x1="77" y1="-8.32222" x2="77" y2="50.3667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                       <linearGradient id="paint1_linear_12_310" x1="77" y1="-50.5" x2="77" y2="88.5"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -378,8 +502,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -404,8 +528,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -499,8 +623,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -524,8 +648,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
