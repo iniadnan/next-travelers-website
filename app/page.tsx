@@ -16,13 +16,16 @@ export default function Page() {
 
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const [isScrollToEscapeParadise, setIsScrollToEscapeParadise] = useState<boolean>(false)
+  const [isScrollToNotification, setIsScrollToNotification] = useState<boolean>(false)
   const [positionEscapeParadise, setPositionEscapeParadise] = useState<number>(0)
+  const [positionNotification, setPositionNotification] = useState<number>(0)
   const [stylesNav, setStylesNav] = useState<object>({
     transform: "translateY(-100%)",
     color: "#EDEDED",
   })
 
   const escapeParadise = useRef()
+  const notificationRef = useRef()
 
   const stylesHeader = {
     widthLeft: "8%",
@@ -47,6 +50,10 @@ export default function Page() {
     if (window.scrollY > (positionEscapeParadise + 450)) {
       setIsScrollToEscapeParadise(true);
     }
+    // WHEN WINDOW IN AREA ESCAPE PARADISE
+    if (window.scrollY > (positionNotification + 450)) {
+      setIsScrollToNotification(true);
+    }
   }
 
   // SCROLLING INIT
@@ -54,6 +61,7 @@ export default function Page() {
     document.addEventListener('scroll', isScrolling);
     setIsMounted(true)
     setPositionEscapeParadise(escapeParadise.current.getBoundingClientRect().top);
+    setPositionNotification(notificationRef.current.getBoundingClientRect().top)
   }, [])
 
   // SWIPER INIT
@@ -841,7 +849,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id='notification'>
+      <section id='notification' ref={notificationRef}>
         <div className="container-travelers pb-[90px] md:pb-[100px] lg:pb-[120px] px-5 md:px-5 lg:px-0">
           <div id="notification-background"
             className="flex items-center justify-center bg-cover bg-center h-[380px] md:h-[420px] lg:h-[450px] rounded-[20px]"
@@ -850,13 +858,13 @@ export default function Page() {
               {/* <!-- TEXT IN HERE --> */}
               <div className="h-[100px] md:h-[55px] overflow-hidden">
                 <h2
-                  className="notification__main-text transform translate-y-[105px] md:translate-y-[60px] font-medium text-[32px] md:text-[36px] lg:text-[40px] text-white leading-[40px] md:leading-[48px] lg:leading-[52px] mb-[14px] md:mb-[18px]">
+                  className="notification__main-text transform translate-y-[105px] md:translate-y-[60px] font-medium text-[32px] md:text-[36px] lg:text-[40px] text-white leading-[40px] md:leading-[48px] lg:leading-[52px] mb-[14px] md:mb-[18px]" style={{ transform: isScrollToNotification ? 'translateY(0px)' : '' }}>
                   Get up to date<br className="block md:hidden" /> notifications
                   from us</h2>
               </div>
               <div className="h-[30px] overflow-hidden">
                 <p
-                  className="notification__secondary-text transform translate-y-[80px] font-medium text-white text-[18px]">
+                  className="notification__secondary-text transform translate-y-[80px] font-medium text-white text-[18px]" style={{ transform: isScrollToNotification ? 'translateY(0px)' : '' }}>
                   Subscribe now for free!</p>
               </div>
               {/* <!-- FORM --> */}
