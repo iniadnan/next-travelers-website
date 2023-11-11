@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link'
 import { useEffect, useState, useRef } from "react";
 import './page.css'
 import Image from 'next/image'
@@ -24,8 +25,8 @@ export default function Page() {
     color: "#EDEDED",
   })
 
-  const escapeParadise = useRef()
-  const notificationRef = useRef()
+  const escapeParadise = useRef<HTMLInputElement | null>(null)
+  const notificationRef = useRef<HTMLInputElement | null>(null)
 
   const stylesHeader = {
     widthLeft: "8%",
@@ -60,8 +61,10 @@ export default function Page() {
   useEffect(() => {
     document.addEventListener('scroll', isScrolling);
     setIsMounted(true)
-    setPositionEscapeParadise(escapeParadise.current.getBoundingClientRect().top);
-    setPositionNotification(notificationRef.current.getBoundingClientRect().top)
+    if(escapeParadise.current != null && notificationRef.current != null) {
+      setPositionEscapeParadise(escapeParadise.current.getBoundingClientRect().top);
+      setPositionNotification(notificationRef.current.getBoundingClientRect().top)
+    }
   }, [])
 
   // SWIPER INIT
@@ -525,11 +528,11 @@ export default function Page() {
               </div>
               <div
                 className="flex items-center gap-x-[22px] md:gap-x-[25px] mt-[25px] md:mt-[29px] lg:mt-[32px] xl:mt-[55px]">
-                <a href="/"
+                <Link href="/"
                   className="h-[45px] inline-flex items-center justify-center px-[13px] font-bold text-base text-[#EDEDED] rounded-[10px]"
                   style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)" }}>Book
-                  a hotel now</a>
-                <a href="/" className="h-[45px]" aria-label="Learn More">
+                  a hotel now</Link>
+                <Link href="/" className="h-[45px]" aria-label="Learn More">
                   <svg className="h-full" width="154" height="45" viewBox="0 0 154 45" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -550,7 +553,7 @@ export default function Page() {
                       </linearGradient>
                     </defs>
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             {/* <!-- ESCAPE PARADISE RIGHT --> */}
@@ -598,7 +601,7 @@ export default function Page() {
                   Book travel</h2>
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide the best
                   travel services for you</h3>
-                <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
+                <Link href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
                   <span className="font-medium text-lg md:text-lg lg:text-2xl"
                     style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
                   <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
@@ -611,12 +614,12 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
-                </a>
+                </Link>
               </article>
               <article className="w-1/2 md:w-full">
                 <h2
@@ -624,7 +627,7 @@ export default function Page() {
                   Book hotel</h2>
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide hotel
                   services for you to rest</h3>
-                  <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
+                  <Link href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
                   <span className="font-medium text-lg md:text-lg lg:text-2xl"
                     style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
                   <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
@@ -637,12 +640,12 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
-                </a>
+                </Link>
               </article>
             </div>
             {/* <!-- BOOKING TRAVEL IMAGE CENTER --> */}
@@ -720,7 +723,7 @@ export default function Page() {
                   Book car</h2>
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide car service
                   for your trip</h3>
-                  <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
+                  <Link href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
                   <span className="font-medium text-lg md:text-lg lg:text-2xl"
                     style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
                   <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
@@ -733,12 +736,12 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
-                </a>
+                </Link>
               </article>
               <article className="w-1/2 md:w-full">
                 <h2
@@ -746,7 +749,7 @@ export default function Page() {
                   Others</h2>
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide various
                   other services</h3>
-                  <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
+                  <Link href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
                   <span className="font-medium text-lg md:text-lg lg:text-2xl"
                     style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
                   <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
@@ -759,12 +762,12 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0077ED" />
-                        <stop offset="1" stop-color="#7BF9D3" />
+                        <stop stopColor="#0077ED" />
+                        <stop offset="1" stopColor="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
-                </a>
+                </Link>
               </article>
             </div>
           </div>

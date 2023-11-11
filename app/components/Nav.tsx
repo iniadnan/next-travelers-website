@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Nav(props: { styles: object }) {
 
     const { styles } = props
@@ -18,25 +20,25 @@ export default function Nav(props: { styles: object }) {
                     </div>
                     {/* <!-- NAV LOGO --> */}
                     <div className="w-4/12 md:w-auto">
-                        <a href="/" className="nav-anchor font-heavitas text-base" style={{ color: styles.color }}>TRAVELERS</a>
+                        <Link href="/" className="nav-anchor font-heavitas text-base" style={{ color: styles.color }}>TRAVELERS</Link>
                     </div>
                     <div className="hidden md:flex md:w-auto md:gap-x-[22px] lg:gap-x-[28px] xl:gap-x-[35px]">
-                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Home</a>
-                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>About Us</a>
-                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Destinations</a>
-                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Travel Deals</a>
-                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Blog</a>
-                        <a href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Services</a>
+                        <Link href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Home</Link>
+                        <Link href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>About Us</Link>
+                        <Link href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Destinations</Link>
+                        <Link href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Travel Deals</Link>
+                        <Link href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Blog</Link>
+                        <Link href="/" className="nav-anchor font-medium text-base" style={{ color: styles.color }}>Services</Link>
                     </div>
                     {/* <!-- BOOK A TRAVEL --> */}
                     <div className="w-4/12 md:w-auto flex justify-end ml-auto">
                         {/* <!-- BUTTON BOOK TRAVEL --> */}
-                        <a href="/"
+                        <Link href="/"
                             className="inline-block py-[8px] px-[10px] md:py-[10px] md:px-[12px] lg:py-[13px] lg:px-[13px] font-bold text-sm md:text-base text-[#EDEDED] rounded-[10px] whitespace-nowrap"
                             style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)" }}>Book <span
                                 className="hidden md:inline-block">a travel</span>
                             <span className="inline-block md:hidden">Now</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

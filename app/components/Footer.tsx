@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
     return (
         <footer>
@@ -12,32 +14,28 @@ export default function Footer() {
                         </h2>
                         <div className="mt-5">
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >FAQ</a
-                                >
+                                >FAQ</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Privacy policy</a
-                                >
+                                >Privacy policy</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Cookies policy</a
-                                >
+                                >Cookies policy</Link>
                             </p>
                             <p>
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Terms of use</a
-                                >
+                                >Terms of use</Link>
                             </p>
                         </div>
                     </div>
@@ -47,32 +45,28 @@ export default function Footer() {
                         </h2>
                         <div className="mt-5">
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >FAQ</a
-                                >
+                                >FAQ</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >About Us</a
-                                >
+                                >About Us</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Career</a
-                                >
+                                >Career</Link>
                             </p>
                             <p>
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Blog</a
-                                >
+                                >Blog</Link>
                             </p>
                         </div>
                     </div>
@@ -82,18 +76,16 @@ export default function Footer() {
                         </h2>
                         <div className="mt-5">
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Country</a
-                                >
+                                >Country</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >City</a
-                                >
+                                >City</Link>
                             </p>
                         </div>
                     </div>
@@ -103,32 +95,28 @@ export default function Footer() {
                         </h2>
                         <div className="mt-5">
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Partner Hub</a
-                                >
+                                >Partner Hub</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Advertise on Travelers</a
-                                >
+                                >Advertise on Travelers</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="#"
                                     className="font-medium text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Affiliate</a
-                                >
+                                >Affiliate</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Partner connectivity</a
-                                >
+                                >Partner connectivity</Link>
                             </p>
                         </div>
                     </div>
@@ -138,18 +126,16 @@ export default function Footer() {
                         </h2>
                         <div className="mt-5">
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >iOS app</a
-                                >
+                                >iOS app</Link>
                             </p>
                             <p className="mb-3.5 md:mb-5">
-                                <a
+                                <Link
                                     href="/"
                                     className="font-medium text-base md:text-lg text-[#8A8A8A] hover:text-[#1E1E1E]"
-                                >Android application</a
-                                >
+                                >Android application</Link>
                             </p>
                         </div>
                     </div>
