@@ -478,16 +478,13 @@ export default function Page() {
               <h2
                 className="font-medium text-[32px] md:text-[32px] lg:text-[36px] xl:text-[40px] text-[#1E1E1E] leading-[40px] md:leading-[40px] lg:leading-[48px] xl:leading-[52px] mb-4">
                 <div className="inline-block h-[47px] overflow-hidden"><span
-                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}
-                  style={{ '--animation-order': 1 }}>Escape to
+                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}>Escape to
                   paradise: discover</span></div>
                 <div className="inline-block h-[47px] overflow-hidden"><span
-                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}
-                  style={{ '--animation-order': 2 }}>unforgettable
+                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}>unforgettable
                   luxury at our</span></div>
                 <div className="inline-block h-[47px] overflow-hidden"><span
-                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}
-                  style={{ '--animation-order': 3 }}>exquisite
+                  className={"escape-paradise__main-text inline-block transform translate-y-[50px] " + (isScrollToEscapeParadise ? 'escape-paradise__main-text-animation' : '')}>exquisite
                   travel hotel</span></div>
               </h2>
               <p className="font-medium text-[19px] md:text-[19px] lg:text-[21.48px] text-[#8A8A8A]">We provide hotels
