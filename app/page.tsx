@@ -561,15 +561,15 @@ export default function Page() {
               <div
                 className="flex items-center gap-x-[15px] absolute right-2 md:right-4 lg:right-6 bottom-6 p-[10px] md:p-[11px] lg:p-[13px] bg-white rounded-[18px]">
                 <div className="flex items-center relative">
-                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative left-0 z-[1]"
+                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative left-0 z-[1]" style={{ left: isScrollToEscapeParadise ? '0px' : '' }}
                     height="42" width="42" src="/images/escape-user-1.png" alt="User 1" />
-                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[8px] z-[2]"
+                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[8px] z-[2]" style={{ left: isScrollToEscapeParadise ? '0px' : '' }}
                     height="42" width="42" src="/images/escape-user-2.png" alt="User 2" />
-                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[18px] z-[3]"
+                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[18px] z-[3]" style={{ left: isScrollToEscapeParadise ? '0px' : '' }}
                     height="42" width="42" src="/images/escape-user-3.png" alt="User 3" />
-                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[28px] z-[4]"
+                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[28px] z-[4]" style={{ left: isScrollToEscapeParadise ? '0px' : '' }}
                     height="42" width="42" src="/images/escape-user-4.png" alt="User 4" />
-                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[38px] z-[5]"
+                  <Image className="escape-paradise__image-slide h-[34px] w-[34px] md:h-[40px] md:w-[40px] lg:h-[42px] lg:w-[42px] rounded-full relative -left-[38px] z-[5]" style={{ left: isScrollToEscapeParadise ? '0px' : '' }}
                     height="42" width="42" src="/images/escape-user-plus.png" alt="User 1" />
                 </div>
                 <div className="h-[42px] w-px bg-[#E5F0F5]"></div>
