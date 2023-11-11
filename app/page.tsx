@@ -13,6 +13,11 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+interface SNav {
+  transform: string;
+  color: string;
+}
+
 export default function Page() {
 
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -20,7 +25,7 @@ export default function Page() {
   const [isScrollToNotification, setIsScrollToNotification] = useState<boolean>(false)
   const [positionEscapeParadise, setPositionEscapeParadise] = useState<number>(0)
   const [positionNotification, setPositionNotification] = useState<number>(0)
-  const [stylesNav, setStylesNav] = useState<object>({
+  const [stylesNav, setStylesNav] = useState<SNav>({
     transform: "translateY(-100%)",
     color: "#EDEDED",
   })

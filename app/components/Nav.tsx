@@ -1,10 +1,12 @@
 import Link from 'next/link'
 
+interface SNav {
+    transform: string;
+    color: string;
+}
+
 interface NavProps {
-    styles: {
-        color: string;
-        transform: string;
-    };
+    styles: SNav;
 }
 
 export default function Nav({ styles }: NavProps) {
