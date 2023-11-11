@@ -360,9 +360,7 @@ export default function Page() {
                 type="button"
                 className="popular-destination-swiper-button-next h-8 w-8 md:h-10 md:w-10 rounded-full inline-flex items-center justify-center"
                 aria-label="Button Swiper Right"
-                style={{
-                  background: "linear-gradient(180deg, #0077ed - 112.22 %, #7bf9d3 196.67%)"
-                }}
+                style={{ background: "linear-gradient(180deg,#0077ed -112.22%,#7bf9d3 196.67%)" }}
               >
                 <svg
                   width="24"
