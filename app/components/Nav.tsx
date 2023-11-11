@@ -1,8 +1,13 @@
 import Link from 'next/link'
 
-export default function Nav(props: { styles: object }) {
+interface NavProps {
+    styles: {
+        color: string;
+        transform: string;
+    };
+}
 
-    const { styles } = props
+export default function Nav({ styles }: NavProps) {
 
     return (
         <nav id="nav" className="w-full fixed z-50">
