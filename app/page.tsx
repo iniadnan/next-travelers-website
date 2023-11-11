@@ -34,38 +34,39 @@ export default function Page() {
     transformTo0: "translateY(0px)",
   }
 
-  function isScrolling() {
-    if (window.scrollY > 100) {
-      setStylesNav({
-        transform: "translateY(0%)",
-        color: "#1E1E1E",
-      })
-    }
-    if (window.scrollY < 100) {
-      setStylesNav({
-        transform: "translateY(-100%)",
-        color: "#EDEDED",
-      })
-    }
-    // WHEN WINDOW IN AREA ESCAPE PARADISE
-    if (window.scrollY > (positionEscapeParadise + 450)) {
-      setIsScrollToEscapeParadise(true);
-    }
-    // WHEN WINDOW IN AREA ESCAPE PARADISE
-    if (window.scrollY > (positionNotification + 450)) {
-      setIsScrollToNotification(true);
-    }
-  }
-
   // SCROLLING INIT
   useEffect(() => {
+    function isScrolling() {
+      if (window.scrollY > 100) {
+        setStylesNav({
+          transform: "translateY(0%)",
+          color: "#1E1E1E",
+        })
+      }
+      if (window.scrollY < 100) {
+        setStylesNav({
+          transform: "translateY(-100%)",
+          color: "#EDEDED",
+        })
+      }
+      // WHEN WINDOW IN AREA ESCAPE PARADISE
+      if (window.scrollY > (positionEscapeParadise + 1234)) {
+        setIsScrollToEscapeParadise(true);
+      }
+      // WHEN WINDOW IN AREA ESCAPE PARADISE
+      if (window.scrollY > (positionNotification + 2023)) {
+        setIsScrollToNotification(true);
+      }
+    }
+    
     document.addEventListener('scroll', isScrolling);
     setIsMounted(true)
     if(escapeParadise.current != null && notificationRef.current != null) {
       setPositionEscapeParadise(escapeParadise.current.getBoundingClientRect().top);
       setPositionNotification(notificationRef.current.getBoundingClientRect().top)
     }
-  }, [])
+    
+  }, [positionEscapeParadise, positionNotification])
 
   // SWIPER INIT
   useEffect(() => {
