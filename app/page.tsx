@@ -599,8 +599,8 @@ export default function Page() {
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide the best
                   travel services for you</h3>
                 <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
-                  <span className="font-medium text-lg md:text-lg lg:text-2xl bg-clip-text fill-transparent"
-                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)" }}>Details</span>
+                  <span className="font-medium text-lg md:text-lg lg:text-2xl"
+                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
                   <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
                     width="40" height="40" viewBox="0 0 40 40" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -611,8 +611,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0077ED" />
-                        <stop offset="1" stopColor="#7BF9D3" />
+                        <stop stop-color="#0077ED" />
+                        <stop offset="1" stop-color="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -624,9 +624,9 @@ export default function Page() {
                   Book hotel</h2>
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide hotel
                   services for you to rest</h3>
-                <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
-                  <span className="font-medium text-lg md:text-lg lg:text-2xl bg-clip-text fill-transparent"
-                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)" }}>Details</span>
+                  <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
+                  <span className="font-medium text-lg md:text-lg lg:text-2xl"
+                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
                   <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
                     width="40" height="40" viewBox="0 0 40 40" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -637,8 +637,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0077ED" />
-                        <stop offset="1" stopColor="#7BF9D3" />
+                        <stop stop-color="#0077ED" />
+                        <stop offset="1" stop-color="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -720,10 +720,11 @@ export default function Page() {
                   Book car</h2>
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide car service
                   for your trip</h3>
-                <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
-                  <span className="font-medium text-lg md:text-lg lg:text-2xl bg-clip-text fill-transparent"
-                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)" }}>Details</span>
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                  <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
+                  <span className="font-medium text-lg md:text-lg lg:text-2xl"
+                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
+                  <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
+                    width="40" height="40" viewBox="0 0 40 40" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40" rx="20" fill="url(#paint0_linear_16_692)" />
                     <path
@@ -732,8 +733,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0077ED" />
-                        <stop offset="1" stopColor="#7BF9D3" />
+                        <stop stop-color="#0077ED" />
+                        <stop offset="1" stop-color="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -745,10 +746,11 @@ export default function Page() {
                   Others</h2>
                 <h3 className="font-medium text-base md:text-base lg:text-lg text-[#8A8A8A]">We provide various
                   other services</h3>
-                <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
-                  <span className="font-medium text-lg md:text-lg lg:text-2xl bg-clip-text fill-transparent"
-                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)" }}>Details</span>
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                  <a href="/" className="flex items-center gap-x-[23px] mt-[18px] md:mt-[22px] lg:mt-[28px]">
+                  <span className="font-medium text-lg md:text-lg lg:text-2xl"
+                    style={{ background: "linear-gradient(180deg, #0077ED -112.22%, #7BF9D3 196.67%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Details</span>
+                  <svg className="h-[32px] md:h-[32px] lg:h-[36px] xl:h-[40px] w-[32px] md:w-[32px] lg:w-[36px] xl:w-[40px]"
+                    width="40" height="40" viewBox="0 0 40 40" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40" rx="20" fill="url(#paint0_linear_16_692)" />
                     <path
@@ -757,8 +759,8 @@ export default function Page() {
                     <defs>
                       <linearGradient id="paint0_linear_16_692" x1="20" y1="-44.8889" x2="20" y2="78.6667"
                         gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0077ED" />
-                        <stop offset="1" stopColor="#7BF9D3" />
+                        <stop stop-color="#0077ED" />
+                        <stop offset="1" stop-color="#7BF9D3" />
                       </linearGradient>
                     </defs>
                   </svg>
